@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!--The <form> element has several attributes that can be used to specify how the form should behave,
+         such as action, method, enctype, and target. Here's a brief overview of these attributes:
+
+action: This attribute specifies the URL where the form data should be submitted when the form is submitted.
+ It can be a relative or absolute URL, or a JavaScript function to handle form submission.
+method: This attribute specifies the HTTP method to be used for submitting the form data. It can be either "GET" or "POST". "GET" method appends the form data to the URL as query parameters, while "POST" method sends the form data in the request body.
+enctype: This attribute specifies the encoding type for the form data when it is submitted.
+ It is used with the method attribute set to "POST".
+  Common values include "application/x-www-form-urlencoded" for URL-encoded form data and "multipart/form-data" for binary 
+  or large form data.
+target: This attribute specifies where the form response should be displayed after form submission. It can take values like "_self"
+ (default), "_blank", "_parent", or "_top", or a custom target name.
+-->
+    <form action="/submituserdata" method="get" target="_blank" autocomplete="off" id="myform1" enctype="multipart/form-data">
+        <input type="text" name="email" placeholder="enter your email">
+        <input type="password" name="pwd" placeholder="enter your password">
+        <input type="submit" value="login">
+
+    <br><br>
+    <label>What is your age ?</label>
+    <select name="userage" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+<br><br>
+<textarea name="message" rows="10" cols="50" style="width:100px;height:100px;max-width:300px;min-width:150px;"></textarea>
+
+<br><br>
+<button type="button" onclick="alert('hey there')">Don't Click</button>
+
+<br><br>
+<fieldset>
+    <legend>Login</legend>
+    <input type="text" name="email" placeholder="enter your email" list="myname">
+    <datalist id="myname">
+        <option value="name1">name1</option>
+        <option value="name2">name2</option>
+        <option value="name3">name3</option>
+    </datalist>
+    <input type="password" name="pwd" placeholder="enter your password">
+    <input type="submit" value="login" formaction="/someotherpath" formenctype="multipart/form-data" formmethod="get" formtarget="_blank">
+</fieldset>
+
+    </form>
+    <input type="submit" value="login" form="myform1">
+</body>
+</html>

@@ -1,0 +1,13 @@
+.box {
+    width: 300px;
+    height: 0px;
+    padding: 20px;
+    border: 1px solid rgb(205, 54, 54);
+    margin: 20px;
+  }
+
+  .example {
+    background-color: aquamarine;
+    color:brown;
+    opacity:0.5;
+  }

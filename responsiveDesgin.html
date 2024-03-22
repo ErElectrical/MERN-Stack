@@ -1,0 +1,68 @@
+<!-- 
+    Media queries are a powerful feature of CSS that allow you to apply different styles to elements based on the screen size
+     or other characteristics of the user's device.
+      Here's an overview of how you can use media queries to apply different styles based on screen size:
+
+1. Define breakpoints:
+ Breakpoints are specific screen widths or device characteristics where you want your styles to change.
+  For example, you may want to apply different styles for screens smaller than 768px (mobile), 
+  between 768px and 1024px (tablet), 
+  and larger than 1024px (desktop). 
+  Define these breakpoints in your CSS as media query rules.
+
+2. Write media queries: 
+Media queries are written using the @media rule in CSS.
+ They consist of a media type (such as screen for screens)
+  and one or more conditions enclosed in parentheses. 
+  The conditions can be based on various characteristics, such as screen width
+  , height, orientation, resolution, and more.
+   Here's an example of a media query for screens smaller than 768px:
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+}
+3. Apply styles: 
+Inside the media query block, you can write the styles that you want to apply for the specified conditions. 
+These styles will only be applied when the conditions of the media query are met. You can target any element on 
+your page and apply styles just like you would in regular CSS.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries Example</title>
+  <style>
+    /* Styles for desktop screens */
+    .some-element {
+      width: 300px;
+      height: 200px;
+      background-color: rgb(136, 136, 236);
+    }
+
+    /* Media query for tablets
+    
+    
+    
+    */
+
+    @media screen and (max-width: 1024px) {
+      .some-element {
+        width: 200px;
+        height: 150px;
+        background-color: rgb(126, 234, 126);
+      }
+    }
+
+    /* Media query for mobile screens */
+    @media screen and (max-width: 768px) {
+      .some-element {
+        width: 150px;
+        height: 100px;
+        background-color: rgb(234, 99, 99);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="some-element"></div>
+</body>
+</html>

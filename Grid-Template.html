@@ -1,0 +1,129 @@
+<!-- Grid is a powerful layout system in CSS that allows you to create two-dimensional layouts with rows and columns.
+     With grid, we can create complex and flexible layouts, and it offers more control over the placement of items
+     than traditional CSS layouts like float, position, and display.
+
+     Grid consists of a grid container and grid items. 
+     The grid container is the parent element that contains the grid items.
+      You can define the grid container by setting its display property to grid.
+       You can also set the grid columns and rows using grid-template-columns and grid-template-rows properties. 
+       Grid items can be placed within the grid container using the grid-column and grid-row properties.
+
+     Some key features of Grid include:
+
+    Ability to create rows and columns, and set their size and position
+    Automatic placement of items in the grid using grid-auto-flow property
+    Grid lines and gutters between rows and columns can be controlled using grid-gap
+    The ability to create named grid lines using grid-template-areas and place items based on these areas using grid-area
+    Ability to overlap items in the grid using the z-index property.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        margin: 20px;
+        grid-gap: 10px;
+        grid-template-columns: 100px 200px 300px;
+        width: 800px;
+        height: 400px;
+        grid-template-columns:100px 100px 100px ;
+        background-color: pink;
+        grid-template-rows: 50px 150px 50px;
+    }
+    .item{
+        background-color: rgb(143, 227, 200);
+        color: black;
+        padding: 10px;
+        font-size: 28px;
+    }
+    .item:nth-child(1){
+        grid-column: 1/4;
+        background-color: palevioletred;
+    }
+    .item:nth-child(2){
+        grid-column: 1/2;
+        background-color: rosybrown;
+    }
+    .item:nth-child(3){
+        grid-column: 2/4;
+        background-color: royalblue;
+    }
+    .container{
+        border: 2px solid black;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .item:nth-child(4){
+        grid-column: 1/4;
+        background-color: brown;
+    }
+    .container1{
+        display: grid;
+        width: 400px;
+        height: 600px;
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(3,100px);
+        grid-gap: 10px;
+        border: 1px solid black;
+        justify-items: start;
+        align-items: start;
+        justify-content: start;
+        align-content: center;
+    }
+    .item1{
+        background-color: plum;
+        color: darkmagenta;
+        padding: 20px;
+        font-size: 30px;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: minmax(100px,1fr);
+        grid-template-rows: repeat(3,100px);
+        grid-gap: 10px;
+        border: 1px solid black;
+    }
+    .item2{
+        background-color: rgb(165, 160, 221);
+        color: rgb(14, 0, 139);
+        padding: 20px;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">Navbar</div>
+        <div class="item">Sidebar</div>
+        <div class="item">Content</div>
+        <div class="item">Footer</div>
+    </div>
+    <div class="container1">
+        <div class="item1">1</div>
+        <div class="item1">2</div>
+        <div class="item1">3</div>
+        <div class="item1">4</div>
+        <div class="item1">5</div>
+        <div class="item1">6</div>
+        <div class="item1">7</div>
+        <div class="item1">8</div>
+        <div class="item1">9</div>
+    </div>
+
+    <br><br>
+<div class="container2">
+    <div class="item2">1</div>
+    <div class="item2">2</div>
+    <div class="item2">3</div>
+    <div class="item2">4</div>
+    <div class="item2">5</div>
+    <div class="item2">6</div>
+</div>
+</body>
+</html>

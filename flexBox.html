@@ -1,0 +1,118 @@
+<!-- "Flexible Box Layout," is a layout model in CSS that allows you to design complex layouts more easily and efficiently.
+     It's particularly useful for aligning and distributing space among items in a container,
+      even when their size is unknown or dynamic.-->
+
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+      </head>
+      <style>
+          *{
+              margin: 0;
+              padding: 0;
+          }
+          .containerflexcount{
+              background-color: aquamarine;
+              max-width: 800px;
+              min-height: 400px;
+          }
+          .containerflexcount p{
+              background-color: rosybrown;
+              color: black;
+              font-size: 25px;
+              border: 1px solid black;
+              box-sizing: border-box;
+          }
+          .containerflexcount{
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: space-between;
+              align-items: flex-start;
+              flex-wrap: wrap;
+      
+          }
+          p{
+              align-self: center;
+          }
+          p:nth-child(2){
+              height: 100px;
+              flex-grow: 2;
+              flex-shrink: 1;
+          }
+          p:nth-child(1){
+              height: 100px;
+              flex-grow: 1;
+              flex-shrink: 1;
+          }
+
+          .containerflexcount2{
+        background-color: aquamarine;
+        max-width: 800px;
+        min-height: 400px;
+    }
+    .containerflexcount2 p{
+        background-color: rosybrown;
+        color: black;
+        font-size: 25px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+    .containerflexcount2{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+    }
+    .containerflexcount2 p{
+        width: 350px;
+        height: 70px;
+    }
+    .containerflexcount2 p:nth-child(2){
+        flex-grow: 2;
+        flex-shrink: 2;
+        flex-basis: 100px;
+    }
+    .containerflexcount2 p:nth-child(1){
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100px;
+    }
+
+      </style>
+      <body>
+          <div class="containerflexcount">
+              <p>Hey</p>
+              <p>THere</p>
+              <p>how</p>
+              <p>are</p>
+              <p>you</p>
+          </div>
+
+          <div class="containerflexcount2">
+            <p>I</p>
+            <p>AM</p>
+            <p>Good How</p>
+            <p>are</p>
+            <p>you</p>
+        </div>
+      </body>
+      </html>
+      
+      <!--display: flex: This property sets the container to use flexbox layout.
+          flex-direction: row-reverse: This property sets the direction of the main axis to be in reverse order horizontally,
+           which means the elements are displayed from right to left.
+          justify-content: space-between: This property aligns the elements with equal space between them along the main axis.
+          align-items: flex-start: This property aligns the items to start from the cross-axis which is vertical in this case.
+          flex-wrap: wrap: This property wraps the items into the next line when there is no more space on the current line.
+
+          flex-grow: 2; makes the second p element twice as large as the other p elements.
+         flex-shrink: 2; allows the second p element to shrink to half its size if there is not enough space for all the elements.
+         flex-basis: 100px; sets the base size of the second and first p element to 100 pixels before any extra space is added by the flex-grow property.
+     -->

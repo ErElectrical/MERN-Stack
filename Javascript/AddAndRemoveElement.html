@@ -1,0 +1,108 @@
+<!-- Adding and removing elements from the DOM involves manipulating the parent element of the element you want to add or remove.
+
+1. To add an element to the DOM, you first need to create the element using the document.createElement() method and then append it to its parent element using the appendChild() method. 
+
+Example : -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv"></div>
+</body>
+<script>
+const div = document.getElementById('myDiv');
+    const p = document.createElement('p');
+    p.textContent = 'This is a new paragraph.';
+    div.appendChild(p);</script>
+</html>
+ 
+
+<!-- Output :
+
+ 
+
+
+Adding Element
+ 
+
+ 
+
+2. To remove an element from the DOM, you first need to select the element using one of the element selection methods such as getElementById() or querySelector(). Once you have the element, you can remove it using the remove() method. 
+
+Examples :
+
+1.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myPara">This is a paragraph.</p>
+</body>
+<script>
+const para = document.getElementById('myPara');
+para.remove();</script>
+</html>
+ 
+
+<!-- Output :
+
+ 
+
+
+Removing Element -->
+ 
+
+2.  removeChild()  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        <p>This is paragraph 1.</p>
+        <p>This is paragraph 2.</p>
+        <p>This is paragraph 3.</p>
+      </div>
+      
+</body>
+<script>
+const div = document.getElementById('myDiv');
+while (div.firstChild) {
+  div.removeChild(div.firstChild);
+}
+</script>
+</html>
+ 
+
+<!-- Output :
+
+ 
+
+
+removeChild()
+ 
+
+Explanation :
+
+This will loop through all child nodes of the div element and remove each one until there are no more child nodes left.
+ -->
